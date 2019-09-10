@@ -1,4 +1,4 @@
-:- module(executor,[generate_story/2]).
+:- module(story_generator,[generate_story/2]).
 :- use_module(story_data).
 :- use_module(planner).
 
@@ -21,4 +21,4 @@ apply_plan(State, [Action|T], [Action|TailOut]) :-
 choose_event(Action, Event, ActionDict) :-
     event(Action, Probability, Event, ActionDict),
     maybe(Probability), !,
-    debug(executor(choose_event), 'Replacing ~w with ~w', [Action, Event]).
+    debug(story_generator(choose_event), 'Replacing ~w with ~w', [Action, Event]).

@@ -1,4 +1,4 @@
-:- module(story_dcg, [story//1]).
+:- module(story_dcg_text, [story//1]).
 
 story([H|T]) --> step(H), "\n", story(T).
 story([]) --> [].

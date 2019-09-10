@@ -1,4 +1,4 @@
-:- module(story_dcg, [story//1]).
+:- module(story_dcg_html, [story//1]).
 
 story(L) --> 
     { phrase(story_(L), StoryHtml) },
